@@ -33,7 +33,7 @@ const getPopular = async () => {
     if(check) {
         setPopular(JSON.parse(check));
     } else {
-        const api = await fetch(` https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=6`);
+        const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=6`);
         const data = await api.json(); // gives a json format of the data
         // console.log(data); // check if it's working
         

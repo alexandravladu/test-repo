@@ -1,13 +1,18 @@
 import Pages from "./pages/Pages";
 import Category from "./components/Category";
+import {BrowserRouter} from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <Category />
-     <Pages />
+      <BrowserRouter>
+        <Category />
+        <Pages />
+     </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+
+//you must surround the category component with Browser Router in order to navigate to different pages using Navlink
