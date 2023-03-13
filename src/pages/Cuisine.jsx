@@ -14,7 +14,7 @@ function Cuisine() {
   // in order to invoke the useState function, we need useEffect
 
   const getCuisine = async (name) => {
-  const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`)
+  const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=8`)
   const recipes = await data.json()
   setCuisine(recipes.results);
 };
