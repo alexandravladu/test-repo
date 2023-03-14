@@ -38,7 +38,7 @@ const [activeTab, setActiveTab] = useState('instructions')
    {activeTab === 'ingredients' && (
      <ul>
      {details.extendedIngredients.map((ingredient) => {
-         <li ley={ingredient.id}>
+         <li key={ingredient.id}>
              {ingredient.original}
          </li>
      })}
